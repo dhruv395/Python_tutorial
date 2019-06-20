@@ -1,7 +1,11 @@
+Single inputs:
+
 s=input("enter your name: ")
 print(s)
 i=int(input("enter integer number: "))
 print(i)
+
+Multiple inputs:
 
 s=input("enter 3 nos separated by space: ").split()
 print(s)
