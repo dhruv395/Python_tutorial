@@ -1,0 +1,31 @@
+print("hello"*3)
+print("all the power \n is with you")
+
+a,b=10,20
+print(a,b)
+print(a,b,sep=',')
+print(a,b,sep='+++++++++')
+
+outputs:
+hellohellohello
+all the power 
+ is with you
+10 20
+10,20
+10+++++++++20
+
+name="john"
+marks=94.5678
+
+print("name is",name, "marks are",marks)
+print("name is %s,marks are %f"%(name,marks))
+print("name is %s, marks are %.2f"%(name,marks))
+print("name is {}, marks are {}".format(name,marks))
+print("name is {0}, marks are {1}".format(name,marks))
+
+Outputs:
+name is john marks are 94.5678
+name is john,marks are 94.567800
+name is john, marks are 94.57
+name is john, marks are 94.5678
+name is john, marks are 94.5678
