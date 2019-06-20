@@ -34,3 +34,13 @@ print(list)
 
 list.clear()
 print(list)
+
+#assignment
+lst=["india","nepal","china"]
+print(lst)
+lst.append("bhutan")
+print(lst)
+del(lst[1])
+print(lst)
+lst.insert(1, "assam")
+print(lst)
