@@ -1,0 +1,35 @@
+s=input("enter your name: ")
+print(s)
+i=int(input("enter integer number: "))
+print(i)
+
+s=input("enter 3 nos separated by space: ").split()
+print(s)
+
+lst=[x for x in input("enter 3 nos separated by space: ").split()]
+print(lst)
+
+lst=[x for x in input("enter 3 nos separated by comma:").split(',')]
+print(lst)
+
+lst=[int(x) for x in input("enter 3 nos separated by comma:").split(',')]
+print(lst)
+
+lst=[float(x) for x in input("enter 3 nos separated by comma:").split(',')]
+print(lst)
+
+Outputs:
+enter your name: dhruv
+dhruv
+enter integer number: 12
+12
+enter 3 nos separated by space: 1 2 3
+['1', '2', '3']
+enter 3 nos separated by space: 1 2 3
+['1', '2', '3']
+enter 3 nos separated by comma:1,2,3
+['1', '2', '3']
+enter 3 nos separated by comma:1,2,3
+[1, 2, 3]
+enter 3 nos separated by comma:1.0,2.0,3.0
+[1.0, 2.0, 3.0]
