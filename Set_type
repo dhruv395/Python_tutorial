@@ -20,3 +20,11 @@ print(type(s))
 
 s.remove(30)
 print(s)
+
+#assignment
+countries={"india","nepal","china","usa"}
+print(countries)
+countries.update(["bhutan"])
+print(countries)
+countries.remove("china")
+print(countries)
