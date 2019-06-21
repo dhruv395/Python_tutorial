@@ -1,0 +1,16 @@
+sys.argv is the list of commandline arguments passed to the Python program. argv represents all the items that come along via the 
+command line input, it's basically an array holding the command line arguments of our program. Don't forget that the counting starts 
+at zero (0) not one (1)
+
+
+import sys
+lst=sys.argv
+for i in lst:print(i)
+print(len(lst))
+print(lst[0])
+
+### product of 2 command line arguments
+
+import sys
+lst=sys.argv
+print("product is",int(lst[1])*int(lst[2]))
