@@ -5,3 +5,26 @@ name=input("enter your name: ")
 marks=float(input("enter your marks: "))
 print("Id:",sid, "Name:", name, "Marks:", marks)
 
+Average of 3 numbers:
+
+a,b,c = [int(x) for x in input("enter 3 nos: ").split()]
+average = (a+b+c)/3
+print("average is: ",average)
+
+Area of a circle:
+
+r = float(input("enter the radius: "))
+pi = 22/7
+area = pi*r**2
+print("area is: ",area)
+          ###### or using "math" module
+import math
+r = float(input("enter the radius: "))
+area = math.pi*r**2
+print("area is: ",area)
+
+
+
+
+
+
