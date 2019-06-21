@@ -1,6 +1,34 @@
+#######################
+if expression:
+   statement(s)
+else:
+   statement(s)
+ ########################
+ if expression1:
+   statement(s)
+elif expression2:
+   statement(s)
+elif expression3:
+   statement(s)
+else:
+   statement(s)
+   ##############################
+   
+ Loops:
+ 
+ while loop
+Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.
+
+	for loop
+Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
+
+	nested loops
+You can use one or more loop inside any another while, for or do..while loop.
+   
+   
 ############ If_Else e.g;
 
-###############find even or odd number
+###############find even or odd number##################################################
 x=int(input("enter a no: "))
 if x%2 == 0:
     print(x, "is even")
@@ -17,7 +45,8 @@ else:
     print(x, "is odd")
     
  
- ######### Grading system:
+ ######### Grading system:##############################################################
+ 
  p,c,m=[int(x) for x in input("enter your marks for phy,chem & maths: ").split()]
 average=(p+c+m)/3
 
@@ -33,12 +62,79 @@ elif average <= 69:
 else:
     print("Congrats, you have passed the exam and grade is A")
     
-################# while loop e.g;
+################# while loop e.g;#########################################################
 x=1
 while(x<=20):
     print(x)
     x+=1
     
-################
+################ Find the odd numbers#####################################################
+x=int(input("enter the min number: "))
+y=int(input("enter the max number: "))
+
+if x%2==0: x+=1
+while x<=y:
+    print(x)
+    x+=2
     
+############################## For Loop##################################################
+for i in range(10,70,2):
+print(i)
+    
+#product of numbers
+
+lst=[1,2,3,4,5]
+prod=1
+
+for i in lst:
+    prod*=i
+print(prod)
+
+### multiplication table of a given number
+
+x=int(input("enter a number for mul table: "))
+
+for i in range(1,11):
+    print(x,"X",i,'=',x*i)
+    
+    
+ ############################# Break statement#########################################
+ display numbers from 3,12 but breaks if finds 5.
+ 
+lst=[3,6,5,9,12]
+for i in lst:
+    if i==5:
+        break
+    print(i)
+    
+    output: 3,6,5
+    
+ ########################## continue ##################################################
+ 
+ display numbers from 1,20 but skips multiplications of 3.
+x=0
+while x<20:
+    x+=1
+    if x%3==0:
+        continue
+    print(x)
+ 
+ ################################ assert ###################################################
+ x=int(input("enter a no greater than ten: "))
+assert x>10, "wrong number entered"
+print("u entered",x)
+############################################################################################
+
+Assignments:
+
+x=int(input("enter a no: "))
+y=0
+while y<x:
+    y+=1
+    if y%10==0:
+        continue
+    if y>100:
+        break
+    print(y)
+
     
