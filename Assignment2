@@ -1,0 +1,7 @@
+Student Details:
+
+sid=int(input("enter your id: "))
+name=input("enter your name: ")
+marks=float(input("enter your marks: "))
+print("Id:",sid, "Name:", name, "Marks:", marks)
+
