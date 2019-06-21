@@ -1,0 +1,44 @@
+############ If_Else e.g;
+
+###############find even or odd number
+x=int(input("enter a no: "))
+if x%2 == 0:
+    print(x, "is even")
+else:
+    print(x, "is odd")
+    
+### If_Elif e.g;
+x=int(input("enter a no: "))
+if x==0:
+    print("its a zero")
+elif x%2==0:
+    print(x, "is even")
+else:
+    print(x, "is odd")
+    
+ 
+ ######### Grading system:
+ p,c,m=[int(x) for x in input("enter your marks for phy,chem & maths: ").split()]
+average=(p+c+m)/3
+
+if p<35 or c<35 or m<35:
+    print("you have failed the exam")
+    
+elif average <= 59:
+    print("Congrats, you have passed the exam and grade is C")
+        
+elif average <= 69:
+    print("Congrats, you have passed the exam and grade is B")
+        
+else:
+    print("Congrats, you have passed the exam and grade is A")
+    
+################# while loop e.g;
+x=1
+while(x<=20):
+    print(x)
+    x+=1
+    
+################
+    
+    
