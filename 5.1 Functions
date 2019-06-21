@@ -1,0 +1,28 @@
+A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity 
+for your application and a high degree of code reusing. As you already know, Python gives you many built-in functions like print(), etc. 
+but you can also create your own functions.
+
+def average(a,b):
+    print("average of 2 nos is:",(a+b)/2)
+average(10, 20)
+        ####or
+def average(a,b):
+    return (a+b)/2
+print(average(10, 20))
+
+########### calculator function########################
+
+def calc(a,b):
+    x=a+b
+    y=a-b
+    z=a*b
+    u=a/b
+    v=a%b
+    return x,y,z,u,v
+result=calc(10, 20)
+#print(result)
+for i in result:
+    print(i)
+
+
+
