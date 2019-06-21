@@ -1,0 +1,29 @@
+x=123       # global variable
+def display():
+    #y=678       #local variable
+    #print(y)
+    x=678
+    print(x)
+print(x)
+display()
+
+## Outputs:
+123
+678
+
+########## accessing global variable with the same name
+
+x=123       # global variable
+def display():
+   
+    x=678
+    print(x)
+    print(globals()['x'])
+print(x)
+display()
+
+####outputs:
+123
+678
+123
+
