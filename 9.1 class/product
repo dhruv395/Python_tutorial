@@ -1,6 +1,20 @@
 E.g; of a Product which has 3 variables or fields-
   -name
-  - description
-  - price
+  -description
+  -price
  
  
+class product:
+    def __init__(self):
+        self.name='iphone'
+        self.description='its awesome'
+        self.price=700
+p1=product()            #object
+print(p1.name)
+print(p1.description)
+print(p1.price)
+
+p2=product()
+print(p2.name)
+print(p2.description)
+print(p2.price)
