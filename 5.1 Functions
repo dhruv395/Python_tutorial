@@ -5,10 +5,23 @@ but you can also create your own functions.
 def average(a,b):
     print("average of 2 nos is:",(a+b)/2)
 average(10, 20)
-        ####or
+        ####or#####################
 def average(a,b):
     return (a+b)/2
 print(average(10, 20))
+
+#### keywords arguments##########
+
+def average(a,b):
+    return (a+b)/2
+print(average(a=10, b=20))
+
+############## default arguments #############################
+
+def average(a=10,b=20):
+    return (a+b)/2
+#print(average())
+print(average(a=30))
 
 ########### calculator function########################
 
@@ -23,6 +36,80 @@ result=calc(10, 20)
 #print(result)
 for i in result:
     print(i)
+#################################################################################
+Local and Global Variable:
+
+''''x=123       # global variable
+def display():
+    #y=678       #local variable
+    #print(y)
+    x=678
+    print(x)
+print(x)
+display()
+
+########## accessing global variable with the same name
+
+x=123            # global variable
+def display():
+    #y=678       #local variable
+    #print(y)
+    x=678
+    print(x)
+    print(globals()['x'])
+print(x)
+display()
+
+### assign function to a variable
+
+x=123
+def display():
+    x=678
+    print(x)
+    print(globals()['x'])
+print(x)
+z=display
+z()
+
+################
+##### function inside another function
+
+def display(name):
+    def message():
+        return "Hello, "
+    result=message()+name
+    return result
+print(display('"dhruv"'))
+
+###################################### returning function#################################
+
+def display():
+    def message():
+        return "Hello,"
+    return message
+
+fun=display()
+print(fun())
+
+########################################  List Function ######################################
+def fun(lst):
+    for i in lst:
+        print(i)
+fun([1,2,3,4])
+
+######################################## recursive function; a function repeating itself #################
+## factorial 
+def factorial(n):
+    if n==0:
+        result=1
+    else:
+        result=n*factorial(n-1)
+    return result
+print(factorial(5))
+
+
+
+
 
 
 
