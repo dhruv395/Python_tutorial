@@ -1,0 +1,123 @@
+################################## Lambda Function #####################################################
+## calculate cube using normal function
+def cube(n):
+    return n**3
+print(cube(2))
+
+##using lambda
+f=lambda n:n**3
+print(f(2))
+
+############## find a even or odd no ########################
+l=lambda x: "yes" if x%2==0 else "no"  
+print(l(10))
+print(l(9))
+
+################# calculate sum ###############################
+def sum(a,b):
+    return a+b
+print(sum(10, 20))
+#####
+
+s=lambda a,b:a+b
+print(s(10,20))
+
+##############  Map function ##################################
+#### double the value of a list
+
+lst=[2,3,4,5]
+result=list(map(lambda n:n*2,lst))
+print(result)
+
+######################### filter function ########################
+# retrieve only even or odd numbers from a list
+
+lst=[10,2,33,45,2,89]
+#result=list(filter(lambda x:x%2==0,lst))
+result=list(filter(lambda x:x%2!=0,lst))
+print(result)
+
+############# Reduce function ####################################
+#####calculate sum of a given list
+
+from functools import reduce # by default reduce is not available
+
+lst=[5,10,15,20]
+result=reduce(lambda x,y:x+y, lst)
+print(result)
+
+###################################### Decor function##############
+## decorator that doubles the result of a function
+def decor(fun):
+    def inner():
+        result=fun()
+        return result*2
+    return inner
+def num():
+    return 5
+resultfun=decor(num)
+print(resultfun())
+
+## using @ decorator#####################################################
+def decorfun(fun):
+    def inner():
+        result=fun()
+        return result*2
+    return inner
+
+@decorfun
+def num():
+    return 5
+print(num())
+
+###################################### String decorator ########################
+def decorfun(fun):
+    def inner(n):
+        result=fun(n)
+        result += " how are you?"
+        return result
+    return inner
+@decorfun
+def hello(name):
+    return "hello "+name
+print(hello("john,"))
+
+Outouts: hello john, how are you?
+
+####################################### Generator function ##################################
+########define custom range
+
+def customgen(x,y):
+    while x<y:
+        yield x
+        x+=1
+result=customgen(10, 20)
+for i in result:print(i)
+
+#######################################  Create a custom module ########################
+'''
+Created on Jun 24, 2019
+
+@author: dhruba.ray
+'''
+# create a mymath custom module. Module is a collection of functions.
+def sum(x,y):
+    return x+y
+def diff(x,y):
+    return x-y
+    
+ ########### test the mymath module##########
+ import mymath
+print(mymath.sum(10, 20))
+print(mymath.diff(10, 20))
+
+####### uses of module ######################################################
+import mymath as ma
+print(ma.diff(10, 5))
+print(ma.sum(10, 5))
+###
+from mymath import *
+print(diff(10, 5))
+print(sum(10, 5))
+
+ 
