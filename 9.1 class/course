@@ -1,0 +1,16 @@
+#parameterized constructor
+#course class
+#fields are name and ratings
+
+class Course:
+    def __init__(self,name,rating):
+        self.name=name
+        self.rating=rating
+        
+c1 = Course("java course",[1,2,3,4,5])
+print(c1.name)
+print(c1.rating)
+
+c2 = Course("java web", [5,5,5,5])
+print(c2.name)
+print(c2.rating)
