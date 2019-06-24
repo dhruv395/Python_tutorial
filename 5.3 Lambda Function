@@ -84,40 +84,4 @@ print(hello("john,"))
 
 Outouts: hello john, how are you?
 
-####################################### Generator function ##################################
-########define custom range
 
-def customgen(x,y):
-    while x<y:
-        yield x
-        x+=1
-result=customgen(10, 20)
-for i in result:print(i)
-
-#######################################  Create a custom module ########################
-'''
-Created on Jun 24, 2019
-
-@author: dhruba.ray
-'''
-# create a mymath custom module. Module is a collection of functions.
-def sum(x,y):
-    return x+y
-def diff(x,y):
-    return x-y
-    
- ########### test the mymath module##########
- import mymath
-print(mymath.sum(10, 20))
-print(mymath.diff(10, 20))
-
-####### uses of module ######################################################
-import mymath as ma
-print(ma.diff(10, 5))
-print(ma.sum(10, 5))
-###
-from mymath import *
-print(diff(10, 5))
-print(sum(10, 5))
-
- 
