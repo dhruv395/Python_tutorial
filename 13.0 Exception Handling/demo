@@ -1,0 +1,49 @@
+try:
+    a,b=[int(x) for x in input("enter 2 nos: ").split()]
+    c=a/b
+    print(c)
+    
+except ZeroDivisionError:
+    print("division by zero is not allowed")
+    print("enter a non zero number")
+
+ Output:
+enter 2 nos: 3 0
+division by zero is not allowed
+enter a non zero number
+
+######################### using finally syntax
+
+try:
+    f=open("myfile","w")
+    a,b=[int(x) for x in input("enter 2 nos: ").split()]
+    c=a/b
+    f.write("writing %d into file" %c)
+    
+except ZeroDivisionError:
+    print("division by zero is not allowed")
+    print("enter a non zero number")
+    
+finally:
+    f.close()
+    print("file closed")
+    
+############################### 
+## using else
+
+try:
+    f=open("myfile","w")
+    a,b=[int(x) for x in input("enter 2 nos: ").split()]
+    c=a/b
+    f.write("writing %d into file" %c)
+    
+except ZeroDivisionError:
+    print("division by zero is not allowed")
+    print("enter a non zero number")
+    
+else:
+    print("u have entered a non zero number")
+    
+finally:
+    f.close()
+    print("file closed")
