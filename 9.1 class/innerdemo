@@ -1,0 +1,15 @@
+class car:
+    def __init__(self,make,year):
+        self.make=make
+        self.year=year
+        
+    class engine:
+        def __init__(self,number):
+            self.number=number
+                
+        def start(self):
+            print("engine started")
+                
+c=car("bmw",1979)
+e=c.engine(123)
+e.start()
