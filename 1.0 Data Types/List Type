@@ -1,0 +1,46 @@
+In Python, list is a type of container in Data Structures, which is used to store multiple data at the same time. Unlike Sets, 
+the list in Python are ordered and have a definite count.The elements in a list are indexed according to a definite sequence and the 
+indexing of a list is done with 0 being the first index.
+
+list=[10,20,"dhruv",30.05,-44]
+print(list)
+print(list[2])
+print(list[2:5])
+print(list*3)
+print(len(list))
+
+
+#add &remove a element in list
+list.append(99)
+print(list)
+
+list.remove("dhruv")
+print(list)
+
+del(list[1])
+print(list)
+
+print(max(list))
+print(min(list))
+
+list.insert(1, 1000)
+print(list)
+
+list.sort()
+print(list)
+
+list.sort(reverse=True)
+print(list)
+
+list.clear()
+print(list)
+
+#assignment
+lst=["india","nepal","china"]
+print(lst)
+lst.append("bhutan")
+print(lst)
+del(lst[1])
+print(lst)
+lst.insert(1, "assam")
+print(lst)
