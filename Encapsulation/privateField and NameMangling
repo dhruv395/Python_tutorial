@@ -1,0 +1,25 @@
+class student:
+    def __init__(self):
+        self.id=12
+        self.name="ray"
+        
+s=student()
+print(s.id)
+print(s.name)
+
+#private field and name mangling method
+
+'''class student:
+    def __init__(self):
+        self.__id=12
+        self.__name="ray"
+        
+    def display(self):
+        print(self.__id)        #private field
+        print(self.__name)      ##private field
+        
+s=student()
+#s.display()
+print(s._student__id)           # name mangling syntax
+print(s._student__name)'''
+
