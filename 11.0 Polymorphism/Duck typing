@@ -1,0 +1,65 @@
+class Duck:
+    def talk(self):
+        print("quack", "quack")
+        
+class Human:
+    def talk(self):
+        print("hello")
+        
+def callTalk(obj):
+    obj.talk()
+    
+d=Duck()
+callTalk(d)
+
+h=Human()
+callTalk(h)
+
+################################## dependency injection
+
+class flight:
+    def __init__(self,engine):
+        self.engine=engine
+        
+    def startengine(self):
+        self.engine.start()
+        
+class Airbusengine:
+    def start(self):
+        print("starting airbus engine")
+        
+class Boingengin:
+    def start(self):
+        print("starting Boing engine")
+        
+a=Airbusengine()
+f=flight(a)
+f.startengine()
+
+b=Boingengin()
+f1=flight(b)
+f1.startengine()
+
+############################## ### runtime polymorphism
+
+class BMW:
+    def __init__(self,make,model,year):
+        self.make=make
+        self.model=model
+        self.year=year
+        
+class threeseries(BMW):
+    def __init__(self,CruiseControlEnabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.cruisecontrolenabled=CruiseControlEnabled
+        
+class fiveseries(BMW):
+    def __init__(self,parkingassistenabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.ParkingassistEnabled=parkingassistenabled
+    
+bmw=threeseries(True,"BMW","A9",2019)
+print(bmw.cruisecontrolenabled)
+print(bmw.make)
+print(bmw.model)
+print(bmw.year)
