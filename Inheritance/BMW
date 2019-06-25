@@ -1,0 +1,136 @@
+###How child class can inherit field from parent class
+class BMW:                                               # parent class
+    def __init__(self,make,model,year):
+        self.make=make
+        self.model=model
+        self.year=year
+        
+class threeseries(BMW):                                    #child class
+    def __init__(self,CruiseControlEnabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.cruisecontrolenabled=CruiseControlEnabled
+        
+class fiveseries(BMW):                                    #child class
+    def __init__(self,parkingassistenabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.ParkingassistEnabled=parkingassistenabled
+    
+threeseries=threeseries(True,"BMW","A9",2019)
+print(threeseries.cruisecontrolenabled)
+print(threeseries.make)
+print(threeseries.model)
+print(threeseries.year)
+
+fiveseries=fiveseries(True,"Audi","B2",2019)
+print(fiveseries.make)
+print(fiveseries.ParkingassistEnabled)
+
+############################################ inherit methods from parent class
+
+'''class BMW:
+    def __init__(self,make,model,year):
+        self.mak=make
+        self.modl=model
+        self.yr=year
+        
+    def start(self):
+        print("starting a car")
+        
+    def stop(self):
+        print("stopping the car")
+        
+        
+class ThreeSeries(BMW):
+    def __init__(self,ParkingAssistEnabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.parkingassistenabled=ParkingAssistEnabled
+        
+    def display(self):
+        print(self.parkingassistenabled)
+        
+class FiveSeries(BMW):
+    def __init__(self,CruiseControlEnabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.cruisecontrolenabled=CruiseControlEnabled
+        
+threeseries=ThreeSeries(True,"BMW","B8",2019)
+print(threeseries.parkingassistenabled)
+print(threeseries.mak)
+threeseries.start()
+threeseries.display()
+
+################################################ overriding
+
+class BMW:
+    def __init__(self,make,model,year):
+        self.mak=make
+        self.modl=model
+        self.yr=year
+        
+    def start(self):
+        print("starting a car")
+        
+    def stop(self):
+        print("stopping the car")
+        
+        
+class ThreeSeries(BMW):
+    def __init__(self,ParkingAssistEnabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.parkingassistenabled=ParkingAssistEnabled
+        
+    def display(self):
+        print(self.parkingassistenabled)
+        
+    def start(self):                        ## overridding
+        print("button start")
+        
+class FiveSeries(BMW):
+    def __init__(self,CruiseControlEnabled,make,model,year):
+        BMW.__init__(self, make, model, year)
+        self.cruisecontrolenabled=CruiseControlEnabled
+        
+threeseries=ThreeSeries(True,"BMW","B8",2019)
+print(threeseries.parkingassistenabled)
+print(threeseries.mak)
+threeseries.start()'''
+
+####################################################### using super() method
+
+class BMW:
+    def __init__(self,make,model,year):
+        self.mak=make
+        self.modl=model
+        self.yr=year
+        
+    def start(self):
+        print("starting a car")
+        
+    def stop(self):
+        print("stopping the car")
+        
+        
+class ThreeSeries(BMW):
+    def __init__(self,ParkingAssistEnabled,make,model,year):
+        super().__init__(make, model, year)                     #super method
+        self.parkingassistenabled=ParkingAssistEnabled
+        
+    def display(self):
+        print(self.parkingassistenabled)
+     
+           
+    def start(self):                        ## overridding
+        super().start()
+        print("button start")
+        
+class FiveSeries(BMW):
+    def __init__(self,CruiseControlEnabled,make,model,year):
+        super().__init__(make, model, year)
+        self.cruisecontrolenabled=CruiseControlEnabled
+        
+threeseries=ThreeSeries(True,"BMW","B8",2019)
+print(threeseries.parkingassistenabled)
+print(threeseries.mak)
+threeseries.start()
+
+
