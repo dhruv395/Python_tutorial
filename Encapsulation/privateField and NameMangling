@@ -23,3 +23,25 @@ s=student()
 print(s._student__id)           # name mangling syntax
 print(s._student__name)'''
 
+####
+
+class student:
+    def setId(self,Id):
+        self.Id=Id
+        
+    def getId(self):
+        return self.Id
+    
+    def setName(self,Name):
+        self.Name=Name
+        
+    def getName(self):
+        return self.Name
+
+s=student()
+s.setId(123)
+s.setName("ray")
+print(s.getId())
+print(s.getName())
+ 
+
