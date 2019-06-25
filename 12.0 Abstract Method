@@ -1,0 +1,45 @@
+from abc import abstractmethod,ABC
+class TouchScreenlaptop(ABC):
+    
+    @abstractmethod
+    def scroll(self):
+        pass
+    @abstractmethod
+    def click(self):
+        pass
+    
+class HP(TouchScreenlaptop,ABC):
+    
+    def scroll(self):
+        print(self.__class__.__name__,'is scrolling')
+        
+    @abstractmethod
+    
+    def click(self):
+        pass
+    
+class DELL(TouchScreenlaptop,ABC):
+    def scroll(self):
+        print(self.__class__.__name__,"is scrolling")
+        
+    @abstractmethod
+    def click(self):
+        pass
+    
+class HPNotebook(HP):
+   
+    def click(self):
+        print(self.__class__.__name__,'is clicking')
+        
+class DELLNotebook(DELL):
+    def click(self):
+        print(self.__class__.__name__,'is clicking')
+        
+        
+hp=HPNotebook()
+hp.scroll()
+
+dell=DELLNotebook()
+dell.scroll()
+dell.click()
+        
