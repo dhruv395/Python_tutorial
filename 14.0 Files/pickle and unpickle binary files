@@ -1,0 +1,25 @@
+####student.py###############
+class student:
+    def __init__(self,id,name,marks):
+        self.id=id
+        self.name=name
+        self.marks=marks
+        
+    def display(self):
+        print(self.id,self.name,self.marks)
+        
+###################### pickledump.py ###################### The process of writing an object to a stream
+import pickle,student
+
+f=open("student.dat", "wb")
+s=student.student(123,"ray",98)
+pickle.dump(s,f)
+f.close()
+
+########################################### pickleload.py### method is used to Unpickle
+
+import pickle
+
+f=open("student.dat","rb")
+obj=pickle.load(f)
+obj.display()
