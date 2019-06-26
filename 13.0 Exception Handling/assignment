@@ -1,0 +1,15 @@
+## if password is less than 8 character, you will get an exception error
+
+import logging
+logging.basicConfig(filename="mylog.log",level=logging.ERROR)
+
+try:
+    p=input("enter ur password: ")
+    assert len(p)>=8, "invalid password length"
+    
+    
+except AssertionError as obj:
+    print(obj)
+    
+    logging.error("invalid password length")
+    
