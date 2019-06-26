@@ -4,3 +4,16 @@ f=open("testfile.txt","w")
 s=input("enter text: ")
 f.write(s)
 f.close()
+
+
+#############
+ writing multiple string
+
+f=open("testfile.txt","w")
+print("Enter ur text(type # when u r done): ")
+s=''
+while s!='#':
+    s=input()
+    f.write(s)
+f.close()
+
