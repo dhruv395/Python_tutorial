@@ -1,0 +1,6 @@
+
+## search a string starting with 'o' and any other 2 alphanumeric character.
+import re
+str="take up one idea.one idea at a time"
+result=re.search(r'o\w\w', str)
+print(result.group())
