@@ -1,0 +1,48 @@
+## logging in action
+
+import logging
+
+logging.error("error")
+logging.critical("critical")
+logging.warning("warning")
+logging.debug("debug")
+logging.info('info')
+
+#################### ### Logging configuration
+
+import logging
+
+logging.basicConfig(filename="mylog.log",level=logging.DEBUG)
+logging.critical("critical")
+logging.error("error")
+logging.warning("warning")
+logging.info('info')
+logging.debug("debug")
+
+################# ########### Log exceptions e.g;#########
+
+import logging
+logging.basicConfig(filename="mylog.log",level=logging.DEBUG)
+
+try:
+    f=open("myfile","w")
+    a,b=[int(x) for x in input("enter 2 nos: ").split()]
+    
+    logging.info("division in progress")
+    
+    c=a/b
+    f.write("writing %d into file" %c)
+    
+except ZeroDivisionError:
+    print("division by zero is not allowed")
+    print("enter a non zero number")
+    
+    logging.error("division by zero")
+    
+else:
+    print("u have entered a non zero number")
+    
+finally:
+    f.close()
+    print("file closed")
+
