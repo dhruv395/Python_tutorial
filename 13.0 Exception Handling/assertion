@@ -1,0 +1,12 @@
+try:
+    number=int(input("enter a even no: "))
+    assert number%2==0, "u have entered a odd number"
+    
+except AssertionError as obj:
+    print(obj)
+print("after the assertion")
+
+output:
+enter a even no: 7
+u have entered a odd number
+after the assertion
