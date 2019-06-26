@@ -19,3 +19,15 @@ print(result)
 
 result=re.match(r't\w\w', str)
 print(result.group())
+
+### ## substitute method
+
+import re
+
+str="take up one idea.one idea at a time"
+result=re.sub(r'one', 'two',str)
+print(result)
+
+output: take up two idea.two idea at a time
+
+
