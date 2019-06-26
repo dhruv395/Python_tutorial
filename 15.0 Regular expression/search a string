@@ -1,6 +1,21 @@
 
 ## search a string starting with 'o' and any other 2 alphanumeric character.
+#search method
+
 import re
 str="take up one idea.one idea at a time"
 result=re.search(r'o\w\w', str)
+print(result.group())
+
+### findall method## returns all the substring that mathces 
+
+import re
+
+str="take up one idea.one idea at a time"
+result=re.findall(r'o\w\w', str)
+print(result)
+
+##match method ## search only the beginning of the string
+
+result=re.match(r't\w\w', str)
 print(result.group())
