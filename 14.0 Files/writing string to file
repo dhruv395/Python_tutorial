@@ -1,0 +1,6 @@
+#open a file for writing
+
+f=open("testfile.txt","w")
+s=input("enter text: ")
+f.write(s)
+f.close()
