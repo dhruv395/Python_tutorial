@@ -1,0 +1,5 @@
+files: where we store data
+
+f=open("filename","mode","buffer")      ->default buffer size is 4096 or 8092 and is optional
+f.close()         ->mode: w-write, r-read, a-append, w+: write and read, r+:read, write and append, a+: appending & reading, x:exclusive 
+                  -> above are for text files and for binary files we need to append "b" with above each mode.
