@@ -1,0 +1,8 @@
+Quantifier is Used to match multiple characters.e.g;
++       -> specify one or more repeatation of the preceding regular expression
+  \d+   -> one or more digits
+  *     -> zero or more repeatation of the preceding regular expression.
+  ?     -> zero or one repeatation of the preceding regular expression.
+  {m}   -> m occurence of the preceding regular expression.
+  {m,n} -> minimum and max number of occurence of the preceding regular expression.
+         -> default value of m and n is: zero and infinity
