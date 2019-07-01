@@ -1,0 +1,26 @@
+import time
+
+epocseconds=time.time()     ## time in seconds since 1970
+print(epocseconds)  
+
+t=time.ctime(epocseconds)   #current date and time
+print(t)
+
+################### finding current date and time
+
+import time,datetime
+
+dt=datetime.datetime.today()
+print(dt)
+print(dt.day,dt.month,dt.year)
+print(dt.hour,dt.minute,dt.second)
+print("current date: {}/{}/{}".format(dt.day,dt.month,dt.year))
+print("current time: {}:{}:{}".format(dt.hour,dt.minute,dt.second))
+
+######################## 
+
+from datetime import *
+d=date(2019,7,1)
+t=time(4,30)
+dt=datetime.combine(d,t)
+print(dt)
