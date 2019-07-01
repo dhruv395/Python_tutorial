@@ -1,0 +1,16 @@
+'\'     -> escape character 
+'.'     -> matches any character except a new line
+'^'     -> search in the begining of a string
+'$'     - search in the end of a string
+'[...]' -> matches every character in this range 
+'[^...]'  -> matches every character except in this range 
+(...)     -> match this regular expression.
+(R|S)     -> matches multiple regular expression.
+
+#########
+import re
+str="take up One idea. One idea at a time Only"
+result=re.search(r"^O\w", str)
+result1=re.search(r"^t\w", str)
+result2=re.search(r"^t\w*", str)
+print(result2.group())
