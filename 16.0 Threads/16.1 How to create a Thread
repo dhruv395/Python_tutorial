@@ -1,0 +1,17 @@
+1) Using a function
+
+  t = Thread(target=functionName,args)
+  t.start()
+  
+  2) Extending the thread class
+  
+  class Mythread(Thread)
+  override the run()
+  t.start()
+  
+  3) Without extending the thread class
+  
+  class MyThread
+      display()
+      t=Thread(target=myobj.display,args)
+  
