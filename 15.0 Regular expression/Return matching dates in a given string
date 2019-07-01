@@ -1,0 +1,9 @@
+date: 22-11-2019
+re.findall(r."\d{1,2}-\d{1,2}-\d{4}",str)
+
+## e.g;
+import re
+
+str="take up One idea 1-3-2019. One idea at a time Only 12-11-2019"
+result=re.findall(r"\d{1,2}-\d{1,2}-\d{4}", str)
+print(result)
