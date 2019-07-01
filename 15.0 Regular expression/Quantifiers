@@ -6,3 +6,17 @@ Quantifier is Used to match multiple characters.e.g;
   {m}   -> m occurence of the preceding regular expression.
   {m,n} -> minimum and max number of occurence of the preceding regular expression.
          -> default value of m and n is: zero and infinity
+
+
+e.g;#############
+import re
+str="take up One idea. One idea at a time Only"
+result=re.findall(r"O\w+", str)
+result2=re.findall(r'O\w*',str)
+result3=re.findall(r'O\w?',str)
+result4=re.findall(r'O\w{1}',str)
+result5=re.findall(r'O\w{2}',str)
+result6=re.findall(r'O\w{3}',str)
+result7=re.findall(r'O\w{1,2}',str)
+print(result6)
+
