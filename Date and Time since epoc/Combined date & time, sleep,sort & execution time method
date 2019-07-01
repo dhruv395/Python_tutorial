@@ -1,0 +1,31 @@
+''from datetime import *
+d=date(2019,7,1)
+t=time(4,30)
+dt=datetime.combine(d,t)
+print(dt)'''
+
+##### sort method 
+
+from datetime import date
+import time
+
+starttime=time.perf_counter()       # it will count the starting time from here 
+
+ldates=[]
+d1=date(2017,1,21)
+d2=date(2017,2,21)
+d3=date(2016,3,21)
+ldates.append(d1)
+ldates.append(d2)
+ldates.append(d3)
+ldates.sort()
+
+time.sleep(3)                          ## it will execute after 3 seconds
+
+for d in ldates:
+    print(d)
+    
+endtime=time.perf_counter()         # it will count the end  time from here 
+print("execution time: ",endtime-starttime)
+
+    
