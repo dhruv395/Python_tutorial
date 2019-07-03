@@ -78,3 +78,48 @@ t2.start()
 
 t3=Thread(target=obj.displaynumber)
 t3.start()
+
+
+######################################################### BookMyBus##############
+
+from threading import *
+
+'''class BookMyBus:
+    def buy(self):
+        print("confirming a seat")
+        print("processing payment")
+        print("printing ticket")
+        
+obj=BookMyBus()
+t1=Thread(target=obj.buy())
+t2=Thread(target=obj.buy())
+t3=Thread(target=obj.buy())'''
+
+######## add more login and synchronization using lock
+
+class BookMyBus:
+    def __init__(self,availableseats):
+        self.availableseats=availableseats
+        self.l=Lock()                       #lock method
+        
+    def buy(self,seatsrequested):
+        self.l.acquire()                    #lock
+        
+        print("total seats available:",self.availableseats)
+        if self.availableseats>=seatsrequested:
+            print("confirming a seat")
+            print("processing payment")
+            print("printing a ticket")
+            self.availableseats-=seatsrequested
+        else:
+            print("no seats available")
+            self.l.release()                    #lock release
+            
+obj=BookMyBus(10)
+t1=Thread(target=obj.buy,args=(3,))
+t2=Thread(target=obj.buy,args=(4,))
+t3=Thread(target=obj.buy,args=(3,))
+
+t1.start()
+t2.start()
+t3.start()
