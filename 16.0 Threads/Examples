@@ -1,0 +1,80 @@
+import threading
+
+print("Current thread is: ",threading.current_thread().getName())
+
+if threading.current_thread()==threading.main_thread():
+    print("main thread")
+    
+else:
+    print("some other thread")
+    
+########################
+
+# thread using a function
+
+'''from threading import Thread
+
+def displayNumbers():
+    i=0
+    while i<=10:
+        print(i)
+        i+=1
+        
+t=Thread(target=displayNumbers)
+t.start()'''
+
+# printing thread names
+
+from threading import *
+
+def displayNumbers():
+    i=0
+    print(current_thread().getName())
+    while i<=10:
+        print(i)
+        i+=1
+
+print(current_thread().getName())        
+t=Thread(target=displayNumbers)
+t.start()
+
+##########################################
+
+from threading import Thread
+
+class MyThread(Thread):
+    def run(self):
+        i=0
+        while(i<=10):
+            print(i)
+            i+=1
+            
+t=MyThread()
+t.start()
+
+
+#########################################
+
+from threading import *
+from time import sleep
+
+class MyThread:
+    def displaynumber(self):
+        i=0
+        print(current_thread().getName())
+        sleep(1)
+        while i<=10:
+            print(i)
+            i+=1
+            
+obj=MyThread()
+t=Thread(target=obj.displaynumber)
+t.start()
+
+### multi threading
+
+t2=Thread(target=obj.displaynumber)
+t2.start()
+
+t3=Thread(target=obj.displaynumber)
+t3.start()
