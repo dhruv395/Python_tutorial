@@ -1,0 +1,21 @@
+import socket
+from urllibdemo import content
+host='localhost'
+port=6767
+
+#create a object
+s=socket.socket()               #default is tcp ipv4 #SOCK_STREAM=tcp;socket.AF_INET=ipv4
+s.bind((host,port))
+print("server listening on port:",port)
+s.listen(1)                      # no of clients server will connect to
+c,addr = s.accept()             #establishes a connection with the server when a client request comes in
+
+fileName=c.recv(1024)
+try:
+    f=open(fileName, 'rb')
+    content=f.read()
+    c.send(content)
+    f.close()
+except FileNotFoundError:
+    c.send(b"file doesn't exist")
+c.close()
