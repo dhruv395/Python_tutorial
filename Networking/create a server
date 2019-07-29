@@ -1,3 +1,5 @@
+## creata a tcpip server that will listen client's request on port 4000
+
 ##tcpipserver.py
 
 import socket
