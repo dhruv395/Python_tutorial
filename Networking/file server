@@ -1,3 +1,5 @@
+## create a server that will send files that the client has requested for
+
 import socket
 from urllibdemo import content
 host='localhost'
