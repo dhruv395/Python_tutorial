@@ -12,7 +12,7 @@ msg['Subject']="hello"
 server=smtplib.SMTP('smtp.gmail.com',587)    ## create a smtp object with smtp server details
 server.starttls()                               ## start a secure connection
 server.login("username@gmail.com", "password")    # email id and password
-server.send(msg)
+server.send_message(msg)
 
 print("mail sent")
 
