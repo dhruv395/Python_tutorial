@@ -1,0 +1,10 @@
+import socket                      #importing a socket module
+
+s=socket.socket()                  #create a object
+s.connect(('localhost',4000))      # connect to server
+msg=s.recv(1024)                   # now receive the msg from server
+
+while msg:
+    print("received: ",msg.decode())
+    msg=s.recv(1024)
+s.close()
