@@ -1,0 +1,25 @@
+import mysql.connector;
+  
+def delete(id):                 #define a funtion delete and paratmeter is 'id' to delelte an employee
+    conn=mysql.connector.connect(host='localhost',database='employee',user='root',password='1Mw@rden')
+
+    if conn.is_connected():
+        print("connected to mysql DB")
+        cursor=conn.cursor()
+        str="delete from employe where id='%d'"         # %d is the placeholder 
+        args=(id)
+
+        try:
+            cursor.execute("str % args")
+            conn.commit()
+            print("employee deleted")
+
+        except:
+            conn.rollback()
+        finally:                                        #this block get executed whether there is an exception or not
+
+            cursor.close()
+            conn.close()
+
+empId=int(input("enter emp id: "))
+delete(empId)
