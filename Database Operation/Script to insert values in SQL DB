@@ -1,0 +1,13 @@
+import mysql.connector;
+conn = mysql.connector.connect(host='localhost',database='employee',user='root',password='1Mw@rden')
+if conn.is_connected():
+    print("connected to DB")
+cursor = conn.cursor()                  # to do database operation
+try:                                    #try block is used if there is any exception then it will rollback
+    cursor.execute("insert into emp values(2,'ray',25000)")
+    conn.commit()
+    print("Employee added")
+except:
+    conn.rollback()
+cursor.close()
+conn.close()
