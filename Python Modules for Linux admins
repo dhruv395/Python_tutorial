@@ -3,6 +3,9 @@ platform
 os
 configparser
 subprocess
+math
+random
+json
 zipfile
 datetime
 shutil
